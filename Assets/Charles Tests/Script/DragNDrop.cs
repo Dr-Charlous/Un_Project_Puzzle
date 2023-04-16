@@ -12,6 +12,7 @@ public class DragNDrop : MonoBehaviour, IPointerEnterHandler, IPointerExitHandle
 {
     [SerializeField] Tilemap tileMap;
     [SerializeField] GameObject BlockPrefab;
+    [SerializeField] TileBase tile_;
     Image image;
     [SerializeField] Color colorOnHover;
     Color initialColor;
@@ -66,7 +67,11 @@ public class DragNDrop : MonoBehaviour, IPointerEnterHandler, IPointerExitHandle
         if (word[0] == blockName)
         {
             GameObject block = Instantiate(BlockPrefab, Camera.main.ScreenToWorldPoint(Input.mousePosition), transform.rotation);
+
             block.transform.position = tileMap.GetCellCenterWorld(tileMap.LocalToCell(new Vector3(block.transform.position.x, block.transform.position.y, 0)));
+            //Vector3 pition = tileMap.LocalToCell(new Vector3Int((int)transform.position.x, (int)transform.position.y, 0));
+            //Vector3 Psition = tileMap.GetCellCenterWorld(new Vector3Int((int)pition.x, (int)pition.y, (int)pition.z));
+            //tileMap.SetTile(new Vector3Int((int)Psition.x, (int)Psition.y, 0), tile_);
             //block.GetComponent<SpriteRenderer>().color = new Color(colorOnHover.r, colorOnHover.g, colorOnHover.b, 1f);
         }
     }

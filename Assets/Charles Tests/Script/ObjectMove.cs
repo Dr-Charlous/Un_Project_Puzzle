@@ -6,49 +6,120 @@ using UnityEngine.Tilemaps;
 
 public class ObjectMove : MonoBehaviour
 {
-    public Vector3 position;
-    public List<Vector3> move = new List<Vector3>(3);
-    public Tilemap tileMap;
+    [SerializeField] Vector3 position;
+    [SerializeField] List<Vector3> move = new List<Vector3>(3);
+    [SerializeField] Tilemap tileMap;
+    [SerializeField] int Time;
+    [SerializeField] bool running = false;
 
     private void Start()
     {
         position = transform.position;
-        StartCoroutine(Move(3));
+        tileMap = GameObject.FindObjectOfType<Tilemap>();
+        //StartCoroutine(Move(3));
     }
 
-    private void Update()
+    void OnTriggerEnter2D(Collider2D collision)
     {
-
-    }
-
-    IEnumerator Move(int Time)
-    {
-        move.Clear();
-        print("Debut");
-
-        move.Add(transform.position);
-        move.Add(tileMap.GetCellCenterWorld(tileMap.LocalToCell(new Vector3(transform.position.x, transform.position.y, 0))));
-
-
-        TileBase tile = tileMap.GetTile(tileMap.LocalToCell(new Vector3(transform.position.x, transform.position.y)));
-        if (tile != null)
+        if (collision.tag != "Rail" && running == false)
         {
-            string a = tile.ToString();
-            string[] word = a.Split(" ");
+            running = true;
+            move.Clear();
 
-            Debug.Log($"/{word[0]}/");
+            //move.Add(collision.transform.position);
+            move.Add(tileMap.GetCellCenterWorld(tileMap.LocalToCell(new Vector3(collision.transform.position.x, collision.transform.position.y, 0))));
+            move.Add(tileMap.GetCellCenterWorld(tileMap.LocalToCell(new Vector3(transform.position.x, transform.position.y, 0))));
 
-            if (word[0] == "TileTest_4")
+            if (gameObject.name == "Up(Clone)")
             {
                 move.Add(tileMap.GetCellCenterWorld(tileMap.LocalToCell(new Vector3(transform.position.x, transform.position.y + 1, 0))));
                 Vector3[] pathArr = move.ToArray();
 
-                transform.DOPath(pathArr, Time);
+                collision.transform.DOPath(pathArr, Time);
+                print("why");
             }
-        }
-        yield return new WaitForSeconds(Time);
+            if (gameObject.name == "Down(Clone)")
+            {
+                move.Add(tileMap.GetCellCenterWorld(tileMap.LocalToCell(new Vector3(transform.position.x, transform.position.y - 1, 0))));
+                Vector3[] pathArr = move.ToArray();
 
-        print("fin");
-        StartCoroutine(Move(Time));
+                collision.transform.DOPath(pathArr, Time);
+                print("it");
+            }
+            if (gameObject.name == "Right(Clone)")
+            {
+                move.Add(tileMap.GetCellCenterWorld(tileMap.LocalToCell(new Vector3(transform.position.x + 1, transform.position.y, 0))));
+                Vector3[] pathArr = move.ToArray();
+
+                collision.transform.DOPath(pathArr, Time);
+                print("doesn't");
+            }
+            if (gameObject.name == "Left(Clone)")
+            {
+                move.Add(tileMap.GetCellCenterWorld(tileMap.LocalToCell(new Vector3(transform.position.x - 1, transform.position.y, 0))));
+                Vector3[] pathArr = move.ToArray();
+
+                collision.transform.DOPath(pathArr, Time);
+                print("work");
+            }
+            StartCoroutine(wait(3));
+            
+        }
     }
+
+    IEnumerator wait(int Time)
+    {
+        yield return new WaitForSeconds(Time);
+        running = false;
+    }
+
+    //IEnumerator Move(int Time)
+    //{
+    //    move.Clear();
+
+    //    move.Add(transform.position);
+    //    move.Add(tileMap.GetCellCenterWorld(tileMap.LocalToCell(new Vector3(transform.position.x, transform.position.y, 0))));
+
+
+    //    TileBase tile = tileMap.GetTile(tileMap.LocalToCell(new Vector3(transform.position.x, transform.position.y)));
+    //    if (tile != null)
+    //    {
+    //        string a = tile.ToString();
+    //        string[] word = a.Split(" ");
+
+    //        Debug.Log($"/{word[0]}/");
+
+    //        if (word[0] == "Up")
+    //        {
+    //            move.Add(tileMap.GetCellCenterWorld(tileMap.LocalToCell(new Vector3(transform.position.x, transform.position.y + 1, 0))));
+    //            Vector3[] pathArr = move.ToArray();
+
+    //            transform.DOPath(pathArr, Time);
+    //        }
+    //        else if (word[0] == "Down")
+    //        {
+    //            move.Add(tileMap.GetCellCenterWorld(tileMap.LocalToCell(new Vector3(transform.position.x, transform.position.y - 1, 0))));
+    //            Vector3[] pathArr = move.ToArray();
+
+    //            transform.DOPath(pathArr, Time);
+    //        }
+    //        else if (word[0] == "Right")
+    //        {
+    //            move.Add(tileMap.GetCellCenterWorld(tileMap.LocalToCell(new Vector3(transform.position.x + 1, transform.position.y, 0))));
+    //            Vector3[] pathArr = move.ToArray();
+
+    //            transform.DOPath(pathArr, Time);
+    //        }
+    //        else if (word[0] == "Left")
+    //        {
+    //            move.Add(tileMap.GetCellCenterWorld(tileMap.LocalToCell(new Vector3(transform.position.x - 1, transform.position.y, 0))));
+    //            Vector3[] pathArr = move.ToArray();
+
+    //            transform.DOPath(pathArr, Time);
+    //        }
+    //    }
+    //    yield return new WaitForSeconds(Time);
+
+    //    StartCoroutine(Move(Time));
+    //}
 }
