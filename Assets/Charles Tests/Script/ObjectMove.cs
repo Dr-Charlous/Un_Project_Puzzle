@@ -19,6 +19,16 @@ public class ObjectMove : MonoBehaviour
         //StartCoroutine(Move(3));
     }
 
+    private void Update()
+    {
+        Vector3 i = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+
+        if (Input.GetMouseButtonDown(1) && tileMap.GetCellCenterWorld(tileMap.LocalToCell(new Vector3(i.x, i.y, transform.position.z))) == tileMap.GetCellCenterWorld(tileMap.LocalToCell(transform.position)))
+        {
+            Destroy(gameObject);
+        }
+    }
+
     void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.tag != "Rail" && running == false)
