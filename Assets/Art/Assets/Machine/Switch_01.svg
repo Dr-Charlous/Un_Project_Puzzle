@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 98 48">
+  <defs>
+    <style>
+      .cls-1 {
+        mix-blend-mode: multiply;
+        opacity: .5;
+      }
+
+      .cls-1, .cls-2 {
+        fill: #d35e4a;
+      }
+
+      .cls-3 {
+        isolation: isolate;
+      }
+
+      .cls-4 {
+        fill: #303030;
+      }
+
+      .cls-5 {
+        fill: #f68e56;
+      }
+
+      .cls-6 {
+        fill: #686868;
+      }
+    </style>
+  </defs>
+  <g class="cls-3">
+    <g id="Calque_2" data-name="Calque 2">
+      <g id="Calque_3" data-name="Calque 3">
+        <rect class="cls-4" width="98" height="48" rx="5.61" ry="5.61"/>
+        <rect class="cls-6" x="4" y="4" width="90" height="40" rx="5.61" ry="5.61"/>
+        <path class="cls-2" d="m91,24c0-9.05-6.33-16.43-14.3-16.95v-.05H22.19c-8.39,0-15.19,7.61-15.19,17s6.8,17,15.19,17h54.51v-.05c7.97-.52,14.3-7.9,14.3-16.95Z"/>
+        <path class="cls-1" d="m90,24c0-8.52-6.18-15.46-13.96-15.95v-.05H22.83c-8.19,0-14.83,7.16-14.83,16s6.64,16,14.83,16h53.21v-.05c7.78-.49,13.96-7.43,13.96-15.95Z"/>
+        <ellipse class="cls-5" cx="25" cy="24" rx="14" ry="13.12"/>
+      </g>
+    </g>
+  </g>
+</svg>

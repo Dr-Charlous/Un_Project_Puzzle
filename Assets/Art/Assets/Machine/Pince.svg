@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Calque_2" data-name="Calque 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 96 156.69">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #5674b9;
+      }
+
+      .cls-2 {
+        fill: #00bff3;
+      }
+
+      .cls-3 {
+        fill: #448ccb;
+      }
+    </style>
+  </defs>
+  <g id="Calque_2-2" data-name="Calque 2">
+    <g>
+      <rect class="cls-3" x="-4.8" y="97.6" width="63.51" height="10.31" rx="1.79" ry="1.79" transform="translate(-72.05 64.24) rotate(-54.04)"/>
+      <rect class="cls-3" x="43.35" y="0" width="10.31" height="63.51" rx="1.79" ry="1.79"/>
+      <rect class="cls-3" x="12.29" y="130.21" width="10.27" height="27.72" rx="3.13" ry="3.13" transform="translate(-88.69 45.08) rotate(-40.09)"/>
+      <rect class="cls-3" x="65.57" y="137.93" width="27.72" height="10.27" rx="3.13" ry="3.13" transform="translate(-81.17 111.68) rotate(-49.91)"/>
+      <rect class="cls-3" x="65.45" y="71" width="9.02" height="63.51" rx="1.19" ry="1.19" transform="translate(-46.02 58.02) rotate(-34.66)"/>
+      <rect class="cls-1" x="40.78" y="58.01" width="15.43" height="16.2" rx="2.59" ry="2.59"/>
+      <circle class="cls-2" cx="48.5" cy="75.46" r="9.5"/>
+      <circle class="cls-2" cx="7.5" cy="130.46" r="7.5"/>
+      <circle class="cls-2" cx="88.5" cy="130.46" r="7.5"/>
+    </g>
+  </g>
+</svg>
