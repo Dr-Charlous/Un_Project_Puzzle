@@ -6,8 +6,8 @@ using UnityEngine.Tilemaps;
 public class Central : MonoBehaviour
 {
     public List<GameObject> ObjectsNeed = new();
-    public List<bool> ObjectsValid = new();
-    public bool finish;
+    [HideInInspector] public List<bool> ObjectsValid = new();
+    [HideInInspector] public bool finish;
 
     void Start()
     {

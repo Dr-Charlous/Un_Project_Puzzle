@@ -12,6 +12,8 @@ public class ObjectMove : MonoBehaviour
     [SerializeField] int Time;
     [SerializeField] bool running = false;
 
+    bool _hasMoved;
+
     private void Start()
     {
         position = transform.position;
@@ -27,7 +29,11 @@ public class ObjectMove : MonoBehaviour
         {
             Destroy(gameObject);
         }
+
+        Debug.Log(_hasMoved);
     }
+
+
 
     void OnTriggerStay2D(Collider2D collision)
     {
@@ -46,6 +52,7 @@ public class ObjectMove : MonoBehaviour
                 Vector3[] pathArr = move.ToArray();
 
                 collision.transform.DOPath(pathArr, Time);
+                collision.GetComponent<Ressources>()._hasMoved = true;
             }
             if (gameObject.name == "Down(Clone)")
             {
@@ -53,6 +60,8 @@ public class ObjectMove : MonoBehaviour
                 Vector3[] pathArr = move.ToArray();
 
                 collision.transform.DOPath(pathArr, Time);
+                collision.GetComponent<Ressources>()._hasMoved = true;
+
             }
             if (gameObject.name == "Right(Clone)")
             {
@@ -60,6 +69,8 @@ public class ObjectMove : MonoBehaviour
                 Vector3[] pathArr = move.ToArray();
 
                 collision.transform.DOPath(pathArr, Time);
+                collision.GetComponent<Ressources>()._hasMoved = true;
+
             }
             if (gameObject.name == "Left(Clone)")
             {
@@ -67,6 +78,8 @@ public class ObjectMove : MonoBehaviour
                 Vector3[] pathArr = move.ToArray();
 
                 collision.transform.DOPath(pathArr, Time);
+                collision.GetComponent<Ressources>()._hasMoved = true;
+
             }
             StartCoroutine(wait(3));
             

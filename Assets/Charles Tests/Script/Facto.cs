@@ -5,10 +5,10 @@ using UnityEngine.Tilemaps;
 public class Facto : MonoBehaviour
 {
     public List<GameObject> ObjectsNeed = new();
-    public List<bool> ObjectsValid = new();
+    [HideInInspector] public List<bool> ObjectsValid = new();
     public GameObject ObjResult;
-    public GameObject Sortie;
-    [SerializeField] Tilemap tileMap;
+    [HideInInspector] public GameObject Sortie;
+    Tilemap tileMap;
 
     void Start()
     {
