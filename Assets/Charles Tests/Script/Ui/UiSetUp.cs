@@ -10,20 +10,13 @@ public class UiSetUp : MonoBehaviour
     private void Start()
     {
         UI = GameObject.FindGameObjectWithTag("UI");
-        UI.SetActive(false);
+        bool activeUI = false;
+        UI.SetActive(activeUI);
     }
 
     public void UiActive()
     {
-        if (!activeUI)
-        {
-            UI.SetActive(false);
-            activeUI = true;
-        }
-        else
-        {
-            UI.SetActive(true);
-            activeUI = false;
-        }
+        activeUI = !activeUI;
+        UI.SetActive(activeUI);
     }
 }
