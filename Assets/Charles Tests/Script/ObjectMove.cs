@@ -29,7 +29,7 @@ public class ObjectMove : MonoBehaviour
         }
     }
 
-    void OnTriggerEnter2D(Collider2D collision)
+    void OnTriggerStay2D(Collider2D collision)
     {
         if (collision.tag != "Rail" && running == false)
         {
@@ -46,7 +46,6 @@ public class ObjectMove : MonoBehaviour
                 Vector3[] pathArr = move.ToArray();
 
                 collision.transform.DOPath(pathArr, Time);
-                print("why");
             }
             if (gameObject.name == "Down(Clone)")
             {
@@ -54,7 +53,6 @@ public class ObjectMove : MonoBehaviour
                 Vector3[] pathArr = move.ToArray();
 
                 collision.transform.DOPath(pathArr, Time);
-                print("it");
             }
             if (gameObject.name == "Right(Clone)")
             {
@@ -62,7 +60,6 @@ public class ObjectMove : MonoBehaviour
                 Vector3[] pathArr = move.ToArray();
 
                 collision.transform.DOPath(pathArr, Time);
-                print("doesn't");
             }
             if (gameObject.name == "Left(Clone)")
             {
@@ -70,7 +67,6 @@ public class ObjectMove : MonoBehaviour
                 Vector3[] pathArr = move.ToArray();
 
                 collision.transform.DOPath(pathArr, Time);
-                print("work");
             }
             StartCoroutine(wait(3));
             
