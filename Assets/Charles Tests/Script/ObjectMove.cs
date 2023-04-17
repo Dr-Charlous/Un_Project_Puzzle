@@ -35,7 +35,7 @@ public class ObjectMove : MonoBehaviour
 
 
 
-    void OnTriggerStay2D(Collider2D collision)
+    void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.tag != "Rail" && running == false)
         {
@@ -52,7 +52,7 @@ public class ObjectMove : MonoBehaviour
                 Vector3[] pathArr = move.ToArray();
 
                 collision.transform.DOPath(pathArr, Time);
-                collision.GetComponent<Ressources>()._hasMoved = true;
+                collision.gameObject.GetComponent<Ressources>()._hasMoved = true;
             }
             if (gameObject.name == "Down(Clone)")
             {
@@ -60,7 +60,7 @@ public class ObjectMove : MonoBehaviour
                 Vector3[] pathArr = move.ToArray();
 
                 collision.transform.DOPath(pathArr, Time);
-                collision.GetComponent<Ressources>()._hasMoved = true;
+                collision.gameObject.GetComponent<Ressources>()._hasMoved = true;
 
             }
             if (gameObject.name == "Right(Clone)")
@@ -69,7 +69,7 @@ public class ObjectMove : MonoBehaviour
                 Vector3[] pathArr = move.ToArray();
 
                 collision.transform.DOPath(pathArr, Time);
-                collision.GetComponent<Ressources>()._hasMoved = true;
+                collision.gameObject.GetComponent<Ressources>()._hasMoved = true;
 
             }
             if (gameObject.name == "Left(Clone)")
@@ -78,7 +78,7 @@ public class ObjectMove : MonoBehaviour
                 Vector3[] pathArr = move.ToArray();
 
                 collision.transform.DOPath(pathArr, Time);
-                collision.GetComponent<Ressources>()._hasMoved = true;
+                collision.gameObject.GetComponent<Ressources>()._hasMoved = true;
 
             }
             StartCoroutine(wait(3));

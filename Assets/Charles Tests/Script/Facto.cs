@@ -31,7 +31,7 @@ public class Facto : MonoBehaviour
         }
         if (y == ObjectsNeed.Count)
         {
-            GameObject block = Instantiate(ObjResult, Sortie.transform.position + new Vector3(1, 0, 0), ObjResult.transform.rotation);
+            GameObject block = Instantiate(ObjResult, Sortie.transform.position, ObjResult.transform.rotation);
             block.transform.position = tileMap.GetCellCenterWorld(tileMap.LocalToCell(new Vector3(block.transform.position.x, block.transform.position.y, 0)));
             for (int i = 0; i < ObjectsNeed.Count; i++)
             {
