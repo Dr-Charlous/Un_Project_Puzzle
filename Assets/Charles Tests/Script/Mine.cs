@@ -7,8 +7,8 @@ public class Mine : MonoBehaviour
 {
     public int Time;
     public GameObject SpawnObject;
-    public GameObject Sortie;
-    [SerializeField] Tilemap tileMap;
+    [HideInInspector] public GameObject Sortie;
+    Tilemap tileMap;
 
     private void Start()
     {
