@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Usine_Right_Out" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 146.27 128">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #b54c3c;
+      }
+
+      .cls-2 {
+        fill: #f28d56;
+      }
+
+      .cls-3 {
+        fill: #ca6347;
+      }
+    </style>
+  </defs>
+  <g>
+    <path class="cls-3" d="M0,17.5H11.24c3.73,0,6.76,3.03,6.76,6.76V103.74c0,3.73-3.03,6.76-6.76,6.76H0V17.5H0Z" transform="translate(18 128) rotate(-180)"/>
+    <path class="cls-2" d="M0,17.5H11.24c3.73,0,6.76,3.03,6.76,6.76v61.48c0,3.73-3.03,6.76-6.76,6.76H0V17.5H0Z" transform="translate(18 110) rotate(-180)"/>
+  </g>
+  <path id="Out" class="cls-1" d="M3.9,57.41l7.42,4.28c1.85,1.07,4.17-.27,4.17-2.41v-8.57c0-2.14-2.32-3.48-4.17-2.41l-7.42,4.28c-1.85,1.07-1.85,3.75,0,4.82Z"/>
+</svg>

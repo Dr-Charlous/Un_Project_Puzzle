@@ -73,7 +73,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: 3286163911610860551, guid: ffa8ee30762cb7049b8c11bcb5dea439, type: 3}
+  m_Sprite: {fileID: 3286163911610860551, guid: beedafdd95dc4e64e923addccd38482a, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -189,12 +189,12 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: 3286163911610860551, guid: 9bd164923d00cd841a1d509cbaeaff6e, type: 3}
+  m_Sprite: {fileID: 3286163911610860551, guid: 600a6c1bc66d610409ace32220b4bee9, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 0.18000005, y: 0.93}
+  m_Size: {x: 0.18000008, y: 0.93}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -277,7 +277,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 3286163911610860551, guid: 67fe47a4030da65479907bc8b908303b, type: 3}
+  m_Sprite: {fileID: 3286163911610860551, guid: f42c6540d681dc24d8b1d0e5267b7fa5, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -361,7 +361,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: 3286163911610860551, guid: 4e3a071a0148ecb458452c1e55242179, type: 3}
+  m_Sprite: {fileID: 3286163911610860551, guid: 4e5bee5157158fd4fae75a36f03c1261, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -445,12 +445,12 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: 3286163911610860551, guid: 15c81a87d8dbb8e4fbaa255bfa98e2af, type: 3}
+  m_Sprite: {fileID: 3286163911610860551, guid: 6169f3ed2522d494095026f5398e2cf9, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 0.18000005, y: 0.93}
+  m_Size: {x: 0.93, y: 0.36320007}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
