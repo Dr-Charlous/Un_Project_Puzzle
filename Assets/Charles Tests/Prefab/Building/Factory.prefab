@@ -24,7 +24,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7976303463374045391}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.46, y: -0.28, z: 0}
+  m_LocalPosition: {x: 0.608, y: -0.249, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -163,7 +163,6 @@ MonoBehaviour:
   ObjectsValid: 
   ObjResult: {fileID: 7861395883214893785, guid: 2da29ab277a7cce4ca416b3b46f112f7, type: 3}
   Sortie: {fileID: 7976303463374045391}
-  tileMap: {fileID: 0}
 --- !u!50 &7976303463630830179
 Rigidbody2D:
   serializedVersion: 4
