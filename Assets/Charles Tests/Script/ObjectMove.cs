@@ -35,7 +35,7 @@ public class ObjectMove : MonoBehaviour
 
 
 
-    void OnTriggerEnter2D(Collider2D collision)
+    void OnTriggerStay2D(Collider2D collision)
     {
         if (collision.tag != "Rail" && running == false)
         {
@@ -43,7 +43,7 @@ public class ObjectMove : MonoBehaviour
             move.Clear();
 
             //move.Add(collision.transform.position);
-            move.Add(tileMap.GetCellCenterWorld(tileMap.LocalToCell(new Vector3(collision.transform.position.x, collision.transform.position.y, 0))));
+            //move.Add(tileMap.GetCellCenterWorld(tileMap.LocalToCell(new Vector3(collision.transform.position.x, collision.transform.position.y, 0))));
             move.Add(tileMap.GetCellCenterWorld(tileMap.LocalToCell(new Vector3(transform.position.x, transform.position.y, 0))));
 
             if (gameObject.name == "Up(Clone)")

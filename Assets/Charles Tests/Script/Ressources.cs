@@ -9,19 +9,7 @@ public class Ressources : MonoBehaviour
     private void Start()
     {
         _hasMoved = false;
-    }
-
-    private void Update()
-    {
-        if (_hasMoved == true)
-            StopCoroutine(Dead());
-        else if (_hasMoved == false)
-            StartCoroutine(Dead());
-    }
-
-    void OnCollisionExit()
-    {
-        _hasMoved = false;
+        StartCoroutine(Dead());
     }
 
     IEnumerator Dead()
@@ -29,5 +17,7 @@ public class Ressources : MonoBehaviour
         yield return new WaitForSeconds(3);
         if (_hasMoved == false)
             Destroy(gameObject);
+        _hasMoved = false;
+        StartCoroutine(Dead());
     }
 }
