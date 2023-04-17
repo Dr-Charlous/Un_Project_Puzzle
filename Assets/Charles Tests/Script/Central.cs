@@ -1,14 +1,13 @@
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Tilemaps;
 
-public class Facto : MonoBehaviour
+public class Central : MonoBehaviour
 {
     public List<GameObject> ObjectsNeed = new();
     public List<bool> ObjectsValid = new();
-    public GameObject ObjResult;
-    public GameObject Sortie;
-    [SerializeField] Tilemap tileMap;
+    public bool finish;
 
     void Start()
     {
@@ -16,7 +15,7 @@ public class Facto : MonoBehaviour
         {
             ObjectsValid.Add(false);
         }
-        tileMap = GameObject.FindObjectOfType<Tilemap>();
+        finish = false;
     }
 
     void Update()
@@ -31,12 +30,8 @@ public class Facto : MonoBehaviour
         }
         if (y == ObjectsNeed.Count)
         {
-            GameObject block = Instantiate(ObjResult, Sortie.transform.position + new Vector3(1, 0, 0), ObjResult.transform.rotation);
-            block.transform.position = tileMap.GetCellCenterWorld(tileMap.LocalToCell(new Vector3(block.transform.position.x, block.transform.position.y, 0)));
-            for (int i = 0; i < ObjectsNeed.Count; i++)
-            {
-                ObjectsValid[i] = false;
-            }
+            finish = true;
+            Time.timeScale = 0.1f;
         }
     }
 

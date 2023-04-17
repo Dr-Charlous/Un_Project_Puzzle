@@ -32,6 +32,7 @@ public class DragNDrop : MonoBehaviour, IPointerEnterHandler, IPointerExitHandle
         image.sprite = BlockPrefab.GetComponent<SpriteRenderer>().sprite;
         image.color = BlockPrefab.GetComponent<SpriteRenderer>().color;
         initialColor = image.color;
+        tileMap = GameObject.FindObjectOfType<Tilemap>();
     }
 
     public void OnPointerEnter(PointerEventData eventData)
