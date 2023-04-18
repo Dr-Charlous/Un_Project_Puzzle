@@ -6832,7 +6832,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 53091077477892331, guid: 005da3992c87a774c90c8f9862fd24c4, type: 3}
       propertyPath: NextScene
-      value: Credits
+      value: Level_1_HB
       objectReference: {fileID: 0}
     - target: {fileID: 53091077477892331, guid: 005da3992c87a774c90c8f9862fd24c4, type: 3}
       propertyPath: ObjectsNeed.Array.data[0]
