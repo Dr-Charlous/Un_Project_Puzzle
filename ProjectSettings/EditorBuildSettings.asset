@@ -6,9 +6,12 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Charles Tests/Scenes/Charles.unity
-    guid: 2cda990e2423bbf4892e6590ba056729
-  - enabled: 1
     path: Assets/Charles Tests/Scenes/Menu.unity
     guid: 38282df9cfa7b39408f9c06fd78d6c81
+  - enabled: 1
+    path: Assets/Charles Tests/Scenes/Credits.unity
+    guid: 11d28039e1567804bada12737c4af912
+  - enabled: 1
+    path: Assets/Charles Tests/Scenes/Charles.unity
+    guid: 2cda990e2423bbf4892e6590ba056729
   m_configObjects: {}
