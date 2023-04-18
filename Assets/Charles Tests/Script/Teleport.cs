@@ -4,12 +4,16 @@ using UnityEngine;
 using DG.Tweening;
 using UnityEngine.Tilemaps;
 
-public class ObjectMove : MonoBehaviour
+public class Teleport : MonoBehaviour
 {
     List<Vector3> move = new List<Vector3>(3);
     Tilemap tileMap;
     [SerializeField] int Time;
     bool running = false;
+    [SerializeField] bool Enter = false;
+    [SerializeField] bool Exit = false;
+    [SerializeField] GameObject EnterObj;
+    [SerializeField] GameObject ExitObj;
     [Header("Direction :")]
     [SerializeField] bool Up = false;
     [SerializeField] bool Right = false;
@@ -23,26 +27,19 @@ public class ObjectMove : MonoBehaviour
         tileMap = GameObject.FindObjectOfType<Tilemap>();
     }
 
-    private void Update()
-    {
-        Vector3 i = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-
-        if (Input.GetMouseButtonDown(1) && tileMap.GetCellCenterWorld(tileMap.LocalToCell(new Vector3(i.x, i.y, transform.position.z))) == tileMap.GetCellCenterWorld(tileMap.LocalToCell(transform.position)))
-        {
-            Destroy(gameObject);
-        }
-    }
-
-
-
     void OnTriggerStay2D(Collider2D collision)
     {
-        if (collision.tag == "Ressources" && running == false)
+        if (Enter == true && collision.gameObject.CompareTag("Ressources"))
+        {
+            collision.transform.DOKill();
+            collision.transform.position = ExitObj.transform.position;
+        }
+        if (Exit == true && collision.gameObject.CompareTag("Ressources") && running == false)
         {
             running = true;
             move.Clear();
 
-            move.Add(tileMap.GetCellCenterWorld(tileMap.LocalToCell(new Vector3(transform.position.x, transform.position.y, 0))));
+            move.Add(new Vector3(transform.position.x, transform.position.y, 0));
 
             if (Up)
             {
@@ -80,11 +77,6 @@ public class ObjectMove : MonoBehaviour
 
             }
             StartCoroutine(wait(3));
-            
-        }
-        else if (collision.tag == "Rail")
-        {
-            Destroy(collision.gameObject);
         }
     }
 
