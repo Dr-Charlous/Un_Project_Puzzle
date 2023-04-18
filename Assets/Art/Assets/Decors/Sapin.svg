@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Calque_2" data-name="Calque 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 57.68 118.89">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #684f43;
+      }
+
+      .cls-2 {
+        fill: #388456;
+      }
+    </style>
+  </defs>
+  <g id="Obstacle">
+    <g>
+      <rect class="cls-1" x="20.4" y="91.64" width="16.35" height="27.25" rx="3" ry="3"/>
+      <path class="cls-2" d="m26.3,1.92L.1,93.72c-.48,1.69.79,3.37,2.55,3.37h52.39c1.76,0,3.03-1.68,2.55-3.37L31.39,1.92c-.73-2.56-4.36-2.56-5.09,0Z"/>
+    </g>
+  </g>
+</svg>
