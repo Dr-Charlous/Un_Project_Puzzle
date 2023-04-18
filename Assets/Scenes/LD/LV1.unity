@@ -4412,6 +4412,10 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
       value: -0.07
       objectReference: {fileID: 0}
+    - target: {fileID: 8700798147646008958, guid: 41e56a4611fe01b479d653ffc4fd8856, type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8700798147739007791, guid: 41e56a4611fe01b479d653ffc4fd8856, type: 3}
       propertyPath: m_IsActive
       value: 0
@@ -9843,7 +9847,7 @@ PrefabInstance:
     - target: {fileID: 2102512053255012366, guid: 7aaa60aa453aaa44d8241fe7acb7fb2e, type: 3}
       propertyPath: SpawnObject
       value: 
-      objectReference: {fileID: 7861395883214893785, guid: dab256146e43a98448150d0de439ca57, type: 3}
+      objectReference: {fileID: 7861395883214893785, guid: 190312f1a044f694c99e4ef19d207728, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7aaa60aa453aaa44d8241fe7acb7fb2e, type: 3}
 --- !u!1001 &719612024
@@ -10109,6 +10113,18 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 7976303463630830188, guid: 4ce711208b8b91c4f95c76a3d2863d47, type: 3}
+      propertyPath: ObjResult
+      value: 
+      objectReference: {fileID: 7861395883214893785, guid: 8ecc1eea6c6811b4bbe9ae40838d6c2e, type: 3}
+    - target: {fileID: 7976303463630830188, guid: 4ce711208b8b91c4f95c76a3d2863d47, type: 3}
+      propertyPath: ObjectsNeed.Array.data[0]
+      value: 
+      objectReference: {fileID: 7861395883214893785, guid: 190312f1a044f694c99e4ef19d207728, type: 3}
+    - target: {fileID: 7976303463630830188, guid: 4ce711208b8b91c4f95c76a3d2863d47, type: 3}
+      propertyPath: ObjectsNeed.Array.data[1]
+      value: 
+      objectReference: {fileID: 7861395883214893785, guid: 3da7915db0e7bc940944029a2e57fe13, type: 3}
     - target: {fileID: 7976303463630830189, guid: 4ce711208b8b91c4f95c76a3d2863d47, type: 3}
       propertyPath: m_RootOrder
       value: 2
@@ -11510,6 +11526,10 @@ PrefabInstance:
       propertyPath: tileMap
       value: 
       objectReference: {fileID: 272841494}
+    - target: {fileID: 2102512053255012366, guid: 7aaa60aa453aaa44d8241fe7acb7fb2e, type: 3}
+      propertyPath: SpawnObject
+      value: 
+      objectReference: {fileID: 7861395883214893785, guid: 3da7915db0e7bc940944029a2e57fe13, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7aaa60aa453aaa44d8241fe7acb7fb2e, type: 3}
 --- !u!1001 &5574047701422786150
@@ -11523,6 +11543,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Central
       objectReference: {fileID: 0}
+    - target: {fileID: 53091077477892331, guid: 005da3992c87a774c90c8f9862fd24c4, type: 3}
+      propertyPath: NextScene
+      value: LV2
+      objectReference: {fileID: 0}
+    - target: {fileID: 53091077477892331, guid: 005da3992c87a774c90c8f9862fd24c4, type: 3}
+      propertyPath: ObjectsNeed.Array.data[0]
+      value: 
+      objectReference: {fileID: 7861395883214893785, guid: 8ecc1eea6c6811b4bbe9ae40838d6c2e, type: 3}
     - target: {fileID: 53091077477892332, guid: 005da3992c87a774c90c8f9862fd24c4, type: 3}
       propertyPath: m_Sprite
       value: 
