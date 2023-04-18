@@ -65,9 +65,9 @@ public class DragNDrop : MonoBehaviour, IPointerEnterHandler, IPointerExitHandle
 
         if (word[0] == blockName)
         {
-            GameObject block = Instantiate(BlockPrefab, Camera.main.ScreenToWorldPoint(Input.mousePosition), transform.rotation);
+            GameObject block = Instantiate(BlockPrefab, Camera.main.ScreenToWorldPoint(Input.mousePosition), transform.rotation, GameObject.FindGameObjectWithTag("Folder").transform);
 
-            block.transform.position = tileMap.GetCellCenterWorld(tileMap.LocalToCell(new Vector3(block.transform.position.x, block.transform.position.y, 0)));
+            block.transform.localPosition = tileMap.GetCellCenterWorld(tileMap.LocalToCell(new Vector3(block.transform.position.x, block.transform.position.y)));
         }
     }
 }

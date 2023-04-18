@@ -55,7 +55,7 @@ public class MousePlus : MonoBehaviour
                 {
                     GameObject block = Instantiate(BlockPrefab[number], Camera.main.ScreenToWorldPoint(Input.mousePosition), transform.rotation, GameObject.FindGameObjectWithTag("Folder").transform);
 
-                    block.transform.position = tileMap.GetCellCenterWorld(tileMap.LocalToCell(new Vector3(block.transform.position.x, block.transform.position.y, 0)));
+                    block.transform.localPosition = tileMap.GetCellCenterWorld(tileMap.LocalToCell(new Vector3(block.transform.position.x, block.transform.position.y)));
                 }
             }
         }
