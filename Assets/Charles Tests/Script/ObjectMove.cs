@@ -6,19 +6,21 @@ using UnityEngine.Tilemaps;
 
 public class ObjectMove : MonoBehaviour
 {
-    [SerializeField] Vector3 position;
-    [SerializeField] List<Vector3> move = new List<Vector3>(3);
-    [SerializeField] Tilemap tileMap;
+    List<Vector3> move = new List<Vector3>(3);
+    Tilemap tileMap;
     [SerializeField] int Time;
-    [SerializeField] bool running = false;
+    bool running = false;
+    [Header("Direction :")]
+    [SerializeField] bool Up = false;
+    [SerializeField] bool Right = false;
+    [SerializeField] bool Down = false;
+    [SerializeField] bool Left = false;
 
     bool _hasMoved;
 
     private void Start()
     {
-        position = transform.position;
         tileMap = GameObject.FindObjectOfType<Tilemap>();
-        //StartCoroutine(Move(3));
     }
 
     private void Update()
@@ -37,16 +39,14 @@ public class ObjectMove : MonoBehaviour
 
     void OnTriggerStay2D(Collider2D collision)
     {
-        if (collision.tag != "Rail" && running == false)
+        if (collision.tag == "Ressources" && running == false)
         {
             running = true;
             move.Clear();
 
-            //move.Add(collision.transform.position);
-            //move.Add(tileMap.GetCellCenterWorld(tileMap.LocalToCell(new Vector3(collision.transform.position.x, collision.transform.position.y, 0))));
             move.Add(tileMap.GetCellCenterWorld(tileMap.LocalToCell(new Vector3(transform.position.x, transform.position.y, 0))));
 
-            if (gameObject.name == "Up(Clone)")
+            if (Up)
             {
                 move.Add(tileMap.GetCellCenterWorld(tileMap.LocalToCell(new Vector3(transform.position.x, transform.position.y + 1, 0))));
                 Vector3[] pathArr = move.ToArray();
@@ -54,7 +54,7 @@ public class ObjectMove : MonoBehaviour
                 collision.transform.DOPath(pathArr, Time);
                 collision.gameObject.GetComponent<Ressources>()._hasMoved = true;
             }
-            if (gameObject.name == "Down(Clone)")
+            if (Down)
             {
                 move.Add(tileMap.GetCellCenterWorld(tileMap.LocalToCell(new Vector3(transform.position.x, transform.position.y - 1, 0))));
                 Vector3[] pathArr = move.ToArray();
@@ -63,7 +63,7 @@ public class ObjectMove : MonoBehaviour
                 collision.gameObject.GetComponent<Ressources>()._hasMoved = true;
 
             }
-            if (gameObject.name == "Right(Clone)")
+            if (Right)
             {
                 move.Add(tileMap.GetCellCenterWorld(tileMap.LocalToCell(new Vector3(transform.position.x + 1, transform.position.y, 0))));
                 Vector3[] pathArr = move.ToArray();
@@ -72,7 +72,7 @@ public class ObjectMove : MonoBehaviour
                 collision.gameObject.GetComponent<Ressources>()._hasMoved = true;
 
             }
-            if (gameObject.name == "Left(Clone)")
+            if (Left)
             {
                 move.Add(tileMap.GetCellCenterWorld(tileMap.LocalToCell(new Vector3(transform.position.x - 1, transform.position.y, 0))));
                 Vector3[] pathArr = move.ToArray();
@@ -83,6 +83,10 @@ public class ObjectMove : MonoBehaviour
             }
             StartCoroutine(wait(3));
             
+        }
+        else if (collision.tag == "Rail")
+        {
+            Destroy(collision.gameObject);
         }
     }
 

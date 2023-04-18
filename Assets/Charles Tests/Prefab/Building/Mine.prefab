@@ -46,7 +46,7 @@ GameObject:
   - component: {fileID: 2102512053255012366}
   m_Layer: 0
   m_Name: Mine
-  m_TagString: Rail
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -181,4 +181,3 @@ MonoBehaviour:
   Time: 5
   SpawnObject: {fileID: 7861395883214893785, guid: 0e6087c1c3334a24ab942814abe1068c, type: 3}
   Sortie: {fileID: 2102512053006645930}
-  tileMap: {fileID: 0}
