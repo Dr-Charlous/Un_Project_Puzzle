@@ -11,7 +11,7 @@ public class UiSetUp : MonoBehaviour
     bool questUI = false;
     bool pauseUI = false;
 
-    private void Start()
+    private void Awake()
     {
         Recipe = GameObject.FindGameObjectWithTag("Recipe");
         Quest = GameObject.FindGameObjectWithTag("Quest");
