@@ -41,7 +41,7 @@ public class Central : MonoBehaviour
             audio.audioSource[1].Stop();
             audio.audioSource[0].PlayOneShot(audio.clips[audio.clips.Length - 1], audio.volume / 2 / 10);
             finish = true;
-            //Time.timeScale = 0.1f;
+            Time.timeScale = 0.1f;
             StartCoroutine(End(NextScene));
         }
     }
@@ -62,7 +62,8 @@ public class Central : MonoBehaviour
 
     IEnumerator End(string title)
     {
-        yield return new WaitForSeconds(3);
+        yield return new WaitForSeconds(0.3f);
+        Time.timeScale = 1;
         SceneManager.LoadScene(title);
     }
 }
