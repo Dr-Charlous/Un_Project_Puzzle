@@ -25,6 +25,7 @@ public class Teleport : MonoBehaviour
     private void Start()
     {
         tileMap = GameObject.FindObjectOfType<Tilemap>();
+        //transform.position = tileMap.GetCellCenterWorld(tileMap.LocalToCell(new Vector3(transform.position.x, transform.position.y, transform.position.z)));
     }
 
     void OnTriggerStay2D(Collider2D collision)

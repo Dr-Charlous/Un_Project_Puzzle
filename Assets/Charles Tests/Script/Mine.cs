@@ -13,6 +13,7 @@ public class Mine : MonoBehaviour
     private void Start()
     {
         tileMap = GameObject.FindObjectOfType<Tilemap>();
+        //transform.position = tileMap.GetCellCenterWorld(tileMap.LocalToCell(new Vector3(transform.position.x, transform.position.y, transform.position.z)));
 
         GameObject block = Instantiate(SpawnObject, Sortie.transform.position, SpawnObject.transform.rotation);
         block.transform.position = tileMap.GetCellCenterWorld(tileMap.LocalToCell(new Vector3(block.transform.position.x, block.transform.position.y, 0)));

@@ -21,6 +21,7 @@ public class ObjectMove : MonoBehaviour
     private void Start()
     {
         tileMap = GameObject.FindObjectOfType<Tilemap>();
+        //transform.position = tileMap.GetCellCenterWorld(tileMap.LocalToCell(transform.position));
     }
 
     private void Update()

@@ -17,6 +17,7 @@ public class Facto : MonoBehaviour
             ObjectsValid.Add(false);
         }
         tileMap = GameObject.FindObjectOfType<Tilemap>();
+        //transform.position = tileMap.GetCellCenterWorld(tileMap.LocalToCell(new Vector3(transform.position.x, transform.position.y, transform.position.z)));
     }
 
     void Update()

@@ -8,6 +8,7 @@ public class Central : MonoBehaviour
     public List<GameObject> ObjectsNeed = new();
     [HideInInspector] public List<bool> ObjectsValid = new();
     [HideInInspector] public bool finish;
+    Tilemap tileMap;
 
     void Start()
     {
@@ -16,6 +17,9 @@ public class Central : MonoBehaviour
             ObjectsValid.Add(false);
         }
         finish = false;
+
+        tileMap = GameObject.FindObjectOfType<Tilemap>();
+        //transform.position = tileMap.GetCellCenterWorld(tileMap.LocalToCell(new Vector3(transform.position.x, transform.position.y, transform.position.z)));
     }
 
     void Update()
@@ -44,8 +48,8 @@ public class Central : MonoBehaviour
             if (s[0] == ObjectsNeed[i].name && ObjectsValid[i] == false)
             {
                 ObjectsValid[i] = true;
-                Destroy(collision.gameObject);
             }
         }
+        Destroy(collision.gameObject);
     }
 }
