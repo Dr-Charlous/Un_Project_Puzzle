@@ -12,6 +12,18 @@ EditorBuildSettings:
     path: Assets/Charles Tests/Scenes/Credits.unity
     guid: 11d28039e1567804bada12737c4af912
   - enabled: 1
-    path: Assets/Charles Tests/Scenes/Charles.unity
-    guid: 2cda990e2423bbf4892e6590ba056729
+    path: Assets/Scenes/LD/LV1.unity
+    guid: 89ab9bbde0886e04897032df803b8cf7
+  - enabled: 1
+    path: Assets/Scenes/LD/LV2.unity
+    guid: 77aa0326e558fbb4c9a605328f8eea6e
+  - enabled: 1
+    path: Assets/Scenes/LD/LV3.unity
+    guid: 1e6807e2ace22bc4ca3ced41cf7aeb4b
+  - enabled: 1
+    path: Assets/Scenes/LD/LV4.unity
+    guid: bf36fb6192674fa4790bf54bdc4078cb
+  - enabled: 1
+    path: Assets/Scenes/LD/LV5.unity
+    guid: 9d0cd7d8a4a85994b88fb46fc1ceaf70
   m_configObjects: {}

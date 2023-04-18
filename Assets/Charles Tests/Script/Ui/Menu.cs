@@ -8,7 +8,7 @@ public class Menu : MonoBehaviour
 {
     public void OnClickPlay()
     {
-        SceneManager.LoadScene("Charles");
+        SceneManager.LoadScene("LV1");
     }
 
     public void OnClickMenu()
