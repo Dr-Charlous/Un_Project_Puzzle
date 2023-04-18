@@ -50,8 +50,8 @@ public class Facto : MonoBehaviour
             if (s[0] == ObjectsNeed[i].name && ObjectsValid[i] == false)
             {
                 ObjectsValid[i] = true;
-                Destroy(collision.gameObject);
             }
         }
+        Destroy(collision.gameObject);
     }
 }

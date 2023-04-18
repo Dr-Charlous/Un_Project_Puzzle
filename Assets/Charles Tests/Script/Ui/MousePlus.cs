@@ -6,7 +6,8 @@ using System.Collections.Generic;
 
 public class MousePlus : MonoBehaviour
 {
-    [SerializeField] Tilemap tileMap;
+    Tilemap tileMap;
+    AudioManager audio;
     public List<GameObject> BlockPrefab = new(4);
     public GameObject BlockPreview;
     public bool Preview = false;
@@ -15,6 +16,7 @@ public class MousePlus : MonoBehaviour
     void Start()
     {
         tileMap = GameObject.FindObjectOfType<Tilemap>();
+        audio = GameObject.FindObjectOfType<AudioManager>();
         Preview = false;
         BlockPreview.SetActive(Preview);
     }
@@ -25,6 +27,7 @@ public class MousePlus : MonoBehaviour
         {
             if (Input.GetKeyDown(KeyCode.R))
             {
+                audio.OnClickSound(2);
                 number += 1;
 
                 if (number == 4)
@@ -42,6 +45,7 @@ public class MousePlus : MonoBehaviour
 
             if (Input.GetMouseButtonDown(0))
             {
+                audio.OnClickSound(1);
                 Vector3 i = Camera.main.ScreenToWorldPoint(Input.mousePosition);
                 TileBase tile = tileMap.GetTile(tileMap.LocalToCell(new Vector3(i.x, i.y)));
 
