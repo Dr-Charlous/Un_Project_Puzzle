@@ -53,7 +53,7 @@ public class MousePlus : MonoBehaviour
 
                 if (word[0] == "Sol")
                 {
-                    GameObject block = Instantiate(BlockPrefab[number], Camera.main.ScreenToWorldPoint(Input.mousePosition), transform.rotation);
+                    GameObject block = Instantiate(BlockPrefab[number], Camera.main.ScreenToWorldPoint(Input.mousePosition), transform.rotation, GameObject.FindGameObjectWithTag("Folder").transform);
 
                     block.transform.position = tileMap.GetCellCenterWorld(tileMap.LocalToCell(new Vector3(block.transform.position.x, block.transform.position.y, 0)));
                 }
@@ -66,23 +66,4 @@ public class MousePlus : MonoBehaviour
         Preview = !Preview;
         BlockPreview.SetActive(Preview);
     }
-
-    //public void OnEndDrag(PointerEventData eventData)
-    //{
-    //    rectTransform.anchoredPosition = initialPosition;
-
-    //    Vector3 i = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-    //    TileBase tile = tileMap.GetTile(tileMap.LocalToCell(new Vector3(i.x, i.y)));
-    //    if (tile == null) return;
-    //    string a = tile.ToString();
-    //    string[] word = a.Split(" ");
-    //    Debug.Log($"/{word[0]}/");
-
-    //    if (word[0] == blockName)
-    //    {
-    //        GameObject block = Instantiate(BlockPrefab, Camera.main.ScreenToWorldPoint(Input.mousePosition), transform.rotation);
-
-    //        block.transform.position = tileMap.GetCellCenterWorld(tileMap.LocalToCell(new Vector3(block.transform.position.x, block.transform.position.y, 0)));
-    //    }
-    //}
 }

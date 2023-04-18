@@ -7,6 +7,10 @@ TagManager:
   - UI
   - Rail
   - Ressources
+  - Folder
+  - Recipe
+  - Quest
+  - Pause
   layers:
   - Default
   - TransparentFX
